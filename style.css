@@ -1,0 +1,167 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margin */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+/* Set core body defaults */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+    display: flex;
+}
+
+.box {
+    width: 320px;
+    background-color: hsl(31, 77%, 52%);
+    padding: 50px;
+}
+
+.box:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.box:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.box._2 {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.box._3 {
+    background-color: hsl(179, 100%, 13%);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    line-height: 1;
+    margin-top: 2rem;
+    margin-bottom: 2.2rem;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.button {
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+    padding: 12px 32px;
+    border-radius: 25px;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.button._2 {
+    color: hsl(184, 100%, 22%);
+}
+
+.button._3 {
+    color: hsl(179, 100%, 13%);
+}
+
+.button:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 50em) {
+    main {
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .box:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .box:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    .button {
+        margin-top: -1px;
+        margin-bottom: 0;
+    }
+}
